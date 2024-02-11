@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    justify-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    width: 100%;
+    margin: 20px;
+}
+
+.searchbox {
+    display: block;
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 2px;
+}
+
+.dropdown {
+    display: block;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 2px;
+}
+
+.buttonbox {
+    display: block;
+    grid-row: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin: 2px;
+}
+
+form input {
+    background: transparent;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 1px;
+    outline: 0;
+    width: 130px;
+    height: 40px;
+}
+
+form select {
+    background: transparent;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 1px;
+    outline: 0;
+    width: 130px;
+    height: 40px;
+}
+
+form option {
+    background-color: rgb(160, 61, 61);
+}
+
+form select option:checked {
+    background-color: rgb(70, 8, 8);
+}
+
+form button {
+    background-color: rgba(255, 255, 255, 0.042);
+    padding: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 70px;
+    cursor: pointer;
+    height: 40px;
+}
+
+form button:hover {
+    background-color: rgba(70, 8, 8, 0.748);
+}
+
+h1 {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    color: rgb(0, 0, 0);
+    font-family: 'Agency FB', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 1 / 6;
+    width: 50%;
+}
+
+#result div {
+    justify-content: center;
+}
+
+#result img {
+    width: 230px;
+    height: 190px;
+    padding: 5px;
+}
+
+#result p {
+    font-family: 'Agency FB', Tahoma, Geneva, Verdana, sans-serif;
+    color: ghostwhite;
+    text-align: center;
+    padding: 2px;
+    width: 230px;
+}
+
+.navbtn {
+    display: flex;
+    justify-content: center;
+    grid-row: 6;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    margin: 5px;
+}
+
+#previouspage {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 90px;
+    cursor: pointer;
+    height: 40px;
+    margin: 2px;
+}
+
+#previouspage:hover {
+    background-color: rgba(117, 90, 90, 0.748);
+}
+
+#nextpage {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 90px;
+    cursor: pointer;
+    height: 40px;
+    margin: 2px;
+}
+
+#nextpage:hover {
+    background-color: rgba(117, 90, 90, 0.748);
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 100%;
+    }
+
+    .header,
+    form,
+    .navbtn {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+        width: 100%;
+    }
+
+    #result {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: auto;
+        grid-row-end: auto;
+        width: 50%;
+    }
+}
