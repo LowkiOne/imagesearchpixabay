@@ -10,10 +10,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Pixabay Images</h1>
-        </div>
+    <header class="header">
+        <h1>Pixabay Images</h1>
         <form id="searchform">
             <div class="searchbox">
                 <input type="text" id="search" name="search" placeholder="Search">
@@ -41,14 +39,14 @@
                 <button type="submit">Search</button>
             </div>
         </form>
-        <div id="result"></div>
-        <div class="navbtn">
+    </header>
+        <main class="main">
+            <div id="result"></div>
+        </main>
+        <footer class="footer">
             <button type="button" id="previouspage">Previous Page</button>
             <button type="button" id="nextpage">Next Page</button>
-        </div>
-
-    </div>
-
+        </footer>
     <script src="script.js"></script>
 </body>
 

@@ -14,58 +14,31 @@ html {
 
 body {
     display: flex;
-    align-items: top;
+    flex-direction: column;
     justify-content: center;
-    margin: 0;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
-    justify-items: center;
 }
 
 .header {
     display: flex;
-    justify-content: center;
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 6;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: 'Agency FB', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    margin-bottom: 10px;
 }
 
 form {
     display: flex;
     justify-content: center;
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    width: 100%;
-    margin: 20px;
 }
 
-.searchbox {
-    display: block;
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    margin: 2px;
-}
-
-.dropdown {
-    display: block;
-    grid-row: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    margin: 2px;
-}
-
-.buttonbox {
-    display: block;
-    grid-row: 2;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    margin: 2px;
+.searchbox, .dropdown,.buttonbox {
+    padding-left: 5px;
 }
 
 form input {
@@ -116,24 +89,17 @@ form button:hover {
     background-color: rgba(70, 8, 8, 0.748);
 }
 
-h1 {
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    color: rgb(0, 0, 0);
-    font-family: 'Agency FB', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 70px;
+.main{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1150px;
 }
 
 #result {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    grid-column: 1 / 6;
-    width: 50%;
-}
-
-#result div {
     justify-content: center;
 }
 
@@ -151,13 +117,10 @@ h1 {
     width: 230px;
 }
 
-.navbtn {
+.footer {
     display: flex;
     justify-content: center;
-    grid-row: 6;
-    grid-column-start: 1;
-    grid-column-end: 6;
-    margin: 5px;
+    margin-top: 10px;
 }
 
 #previouspage {
@@ -194,30 +157,4 @@ h1 {
 
 #nextpage:hover {
     background-color: rgba(117, 90, 90, 0.748);
-}
-
-@media (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        height: 100%;
-    }
-
-    .header,
-    form,
-    .navbtn {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        grid-row-start: auto;
-        grid-row-end: auto;
-        width: 100%;
-    }
-
-    #result {
-        grid-column-start: auto;
-        grid-column-end: auto;
-        grid-row-start: auto;
-        grid-row-end: auto;
-        width: 50%;
-    }
 }

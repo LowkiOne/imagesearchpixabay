@@ -35,7 +35,7 @@ function activateButtons() {
 
 async function imageSearch() {
     try {
-        const respone = await fetch(`https://pixabay.com/api/?key=${apiKey}&q=${color}+${search}&image_type=photo&page=${page}&per_page=10`);
+        const respone = await fetch(`https://pixabay.com/api/?key=${apiKey}&q=${search}&colors=${color}&image_type=photo&page=${page}&per_page=10`);
 
         if (!respone.ok) {
             throw new Error("No image")
